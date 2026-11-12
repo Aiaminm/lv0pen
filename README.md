@@ -1,26 +1,29 @@
 # lv0pen
 
-Source for the PlayStation 3 boot chain, rebuilt with the original compilers to the original code.
+Source for the PlayStation 3 boot chain and its isolated SPU modules, rebuilt with the original compilers to the original code.
 
 | | Program | Matching |
 |---|---|---|
 | `lv0` | lv0 4.93 | 100% |
 | `lv0ldr` | bootldr 1.0.0 | 458 / 458 |
+| `lv0ldr2` | lv0ldr.2 3.6.5 | 472 / 474 |
 | `metldr` | metldr | 182 / 182 |
+| `metldr2` | metldr.2 3.6.5 | 208 / 208 |
 | `isoldr` | isoldr 4.93 | 273 / 273 |
 | `lv1ldr` | lv1ldr 4.93 | 293 / 300 |
 | `lv2ldr` | lv2ldr 4.93 | 258 / 259 |
 | `appldr` | appldr 4.93 | 446 / 446 |
+| `spp_verifier` | spp_verifier 4.93 | 139 / 141 |
+| `spu_token_processor` | spu_token_processor 4.93 | 105 / 106 |
+| `spu_utoken_processor` | spu_utoken_processor 4.93 | 73 / 75 |
+| `spu_pkg_rvk_verifier` | spu_pkg_rvk_verifier 4.93 | 165 / 171 |
+| `aim_spu_module` | aim_spu_module 4.93 | 40 / 41 |
+| `manu_info_spu_module` | manu_info_spu_module 4.93 | 16 / 16 |
+| `sc_iso` | sc_iso 4.93 | 307 / 335 |
+| `sb_iso_spu_module` | sb_iso_spu_module 4.93 | 53 / 60 |
+| `mc_iso_spu_module` | mc_iso_spu_module 4.93 | 40 / 45 |
 
-## Compilers
-
-- PPU GCC 4.1.1 (SDK420): `lv0`
-- SPU GCC 4.1.1 (SDK420): `isoldr`, `lv1ldr`, `lv2ldr`, `appldr`
-- SPU GCC 4.0.2 (CELL 4.1.7): `lv0ldr`, `metldr`
-- SPU GCC 3.4.1 (CELL 2.2.1): crypto
-- SPU GCC 4.1.1 (CELL 4.1.2.6 Beta): `lv1ldr/encdec`
-
-No firmware is included.
+No firmware is included. See [BUILDING.md](BUILDING.md) to build.
 
 ## License
 
